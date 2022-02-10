@@ -72,7 +72,7 @@ let generateMD = () => {
       }
     ])
     .then((answer) =>
-      fs.writeFile("README.md", readMeContent(answer), (err) =>
+      fs.writeFile("./output/generated_README.md", readMeContent(answer), (err) =>
       err ? console.error(err) : console.log("Success! README.md created.")
       )
     );
