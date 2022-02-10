@@ -143,7 +143,7 @@ ${data.test}
 
 ## Questions
 
-My GitHub Page: [${data.github}](https://github.com/${data.github}.org)
+My GitHub Page: [${data.github}](https://github.com/${data.github})
 
 If you have any additional questions, please contact me at ${data.email}.`};
 
