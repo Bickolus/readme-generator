@@ -12,10 +12,12 @@ let generateMD = () => {
         message: "Give a title for your project:",
         name: "title",
         validate: nameInput => {
-          nameInput
-          ? true
-          : console.log("Please do not leave this blank.");
+          if (nameInput) {
+            return true;
+          } else {
+            console.log("Please do not leave this blank.");
             false;
+          }
         }
       },
       {
@@ -39,10 +41,10 @@ let generateMD = () => {
         name: "license",
         choices: [
           "APACHE 2.0", 
-          "Boost Software License 1.0", 
+          "Boost 1.0", 
           "BSD 3-Clause", 
           "Creative Commons A4.0", 
-          "GNU GPL 3.0", 
+          "GNU GPL v3", 
           "MIT", 
           "MPL 2.0", 
           "No License"
@@ -55,7 +57,7 @@ let generateMD = () => {
       },
       {
         type: "input",
-        message: "Write any tests that the user could do for the program:",
+        message: "Write down any tests that the user could do for the program:",
         name: "test"
       },
       {
@@ -80,13 +82,27 @@ let getLicenseIcon = (license) => {
   switch (license) {
     case "APACHE 2.0":
       return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-    case "Boost Software License 1.0":
-      return ""
+    case "Boost 1.0":
+      return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+    case "BSD 3-Clause":
+      return "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+    case "Creative Commons A4.0":
+      return "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)";
+    case "GNU GPL v3":
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    case "MIT":
+      return " [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    case "MPL 2.0":
+      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    default:
+      return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
   }
 }
 
 let readMeContent = (data) => {
 return `# ${data.title}
+
+${getLicenseIcon(data.license)}
 
 ## Description
 
@@ -123,12 +139,13 @@ ${data.contributing}
 
 ## Tests 
 
-${data.tests}
+${data.test}
 
 ## Questions
 
 My GitHub Page: [${data.github}](https://github.com/${data.github}.org)
 
-If you have any questions, please contact me at ${data.email}.`};
+If you have any additional questions, please contact me at ${data.email}.`};
 
+// initialize script
 generateMD();
