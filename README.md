@@ -6,6 +6,12 @@
 
 This is a program that takes a bunch of user inputs and then outputs a README.md in the "outputs" folder labelled as "generated_README.nd". The user will be prompted for a couple questions, such as what the title or description of their project will be. It will also ask what kind of license the user wants their project under. It will then generate a badge based on the license the user chose. The program will also ask for the user's GitHub username and e-mail address, which will then display a link to the user's profile on GitHub. 
 
+### Links
+
+
+Repository Link: [https://github.com/Bickolus/readme-generator](https://github.com/Bickolus/readme-generator)
+
+
 ## Table of Contents
 
 1. [Installation](#installation)
@@ -43,6 +49,6 @@ You are allowed to improve this program. If you have any ideas how, go ahead and
 
 ## Questions
 
-My GitHub Page: [Bickolus](https://github.com/Bickolus.org)
+My GitHub Page: [Bickolus](https://github.com/Bickolus)
 
 If you have any questions, please contact me at smbraza97@gmail.com.
