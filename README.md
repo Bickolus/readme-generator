@@ -37,7 +37,7 @@ To run the program, type "node index.js" in the command line (when you are in th
 
 ### Video Demonstration:
 
-https://user-images.githubusercontent.com/96181899/153436071-cc371921-63e4-48af-ad27-b32ab6496e99.mp4
+https://user-images.githubusercontent.com/96181899/153502995-c2496dd6-9999-44e0-bd76-a2aa980d25bd.mp4
 
 ## License
 
